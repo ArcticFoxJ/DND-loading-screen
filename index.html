@@ -13,12 +13,15 @@
         
         * {
           color: white;
+          box-sizing: border-box;
         }
 
         #text-container {
-            width: 100%;
+            margin: 0;
             position: absolute;
             top: 50%;
+            left: 0;
+            right: 0;
             text-align: center;
             font-size: 2.5em;
         }
@@ -26,7 +29,7 @@
     <script>
         window.addEventListener('load', function () {
 
-            const timeout = 4000
+            const timeoutSeconds = 10
             const includeGeneric = true
             const includeGameplay = true
 
@@ -36,12 +39,13 @@
             if (includeGeneric) { tips = tips.concat(player_tips['generic']) }
             if (includeGameplay) { tips = tips.concat(player_tips['gameplay']) }
 
-            console.log(tips)
+            container.innerText = tips[Math.floor(Math.random()*tips.length)]
+
             const updateText = () => {
                 setTimeout(() => {
                     container.innerText = tips[Math.floor(Math.random()*tips.length)]
                     updateText()
-                }, timeout)
+                }, timeoutSeconds * 1000)
             };
 
             updateText()
