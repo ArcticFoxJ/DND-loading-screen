@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="player-tips.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+          background-color: black;
+        }
+        
+        * {
+          color: white;
+        }
+
+        #text-container {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            text-align: center;
+            font-size: 2.5em;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function () {
+
+            const timeout = 4000
+            const includeGeneric = true
+            const includeGameplay = true
+
+            const container = document.getElementById('text-container')
+
+            var tips = []
+            if (includeGeneric) { tips = tips.concat(player_tips['generic']) }
+            if (includeGameplay) { tips = tips.concat(player_tips['gameplay']) }
+
+            console.log(tips)
+            const updateText = () => {
+                setTimeout(() => {
+                    container.innerText = tips[Math.floor(Math.random()*tips.length)]
+                    updateText()
+                }, timeout)
+            };
+
+            updateText()
+        })
+    </script>
+</head>
+<body style="background_color: black;">
+    <div id="text-container"></div>
+</body>
+</html>
