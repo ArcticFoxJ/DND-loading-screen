@@ -25,6 +25,22 @@
             text-align: center;
             font-size: 2.5em;
         }
+
+        #loading-bar-container {
+            position: absolute;
+            bottom: 20px;
+            height: 20px;
+            left: 30%;
+            right: 30%;
+            outline: 2px solid white;
+        }
+
+        #loading-bar {
+            background-color: white;
+            height: 100%;
+            width: 100%;
+        }
+
     </style>
     <script>
         window.addEventListener('load', function () {
@@ -33,7 +49,9 @@
             const includeGeneric = true
             const includeGameplay = true
 
+            const timeoutMilliseconds = timeoutSeconds * 1000
             const container = document.getElementById('text-container')
+            const loading_bar = document.getElementById('loading-bar')
 
             var tips = []
             if (includeGeneric) { tips = tips.concat(player_tips['generic']) }
@@ -41,18 +59,29 @@
 
             container.innerText = tips[Math.floor(Math.random()*tips.length)]
 
-            const updateText = () => {
-                setTimeout(() => {
-                    container.innerText = tips[Math.floor(Math.random()*tips.length)]
-                    updateText()
-                }, timeoutSeconds * 1000)
-            };
+            setInterval(updateLoadingBar, (timeoutMilliseconds / 100) / 5)
 
-            updateText()
+            var width = 0;
+            function updateLoadingBar() {
+                if (width < 100) {
+                    width+=0.2
+                    loading_bar.style.width = width + "%";
+                    console.log(width)
+                }
+            }
+
+            function updateText() {
+                container.innerText = tips[Math.floor(Math.random()*tips.length)]
+                width = 1;
+            }
+            setInterval(updateText, timeoutMilliseconds);
         })
     </script>
 </head>
 <body>
     <div id="text-container"></div>
+    <div id="loading-bar-container">
+        <div id="loading-bar"></div>
+    </div>
 </body>
 </html>
