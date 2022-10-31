@@ -8,12 +8,14 @@
     <title>Document</title>
     <style>
         body {
-          background-color: black;
+            background-image: url("wallpaper.jpg");
+            background-size:cover;
+            background-repeat: no-repeat;
         }
         
         * {
-          color: white;
-          box-sizing: border-box;
+            color: white;
+            box-sizing: border-box;
         }
 
         #text-container {
@@ -24,6 +26,7 @@
             right: 0;
             text-align: center;
             font-size: 2.5em;
+            backdrop-filter: blur(10px) saturate(70%);
         }
 
         #loading-bar-container {
@@ -45,8 +48,9 @@
             position: absolute;
             bottom: 0;
             right: 0;
+            backdrop-filter: blur(10px) saturate(70%);
         }
-        
+
     </style>
     <script>
         window.addEventListener('load', function () {

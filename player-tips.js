@@ -100,7 +100,7 @@ const player_tips = {
 
         "If you want to know more about the land or the plants and beasts that live upon it, try a nature check",
         "If you are vulnerable to a damage type, you take double damage from that type",
-        "If you are resistant to a damage type, you take half damage from taht type",
+        "If you are resistant to a damage type, you take half damage from that type",
         "On high jumps, you cover a number of feet up to 3 + your Strength modifier if you have a 10 foot running start",
         "High jumps without a running start only cover a number of feet up to half of your Strength modifier",
         "On long jumps, you cover a number of feet up to your Strength score if you have a 10 foot running start",
@@ -122,14 +122,14 @@ const player_tips = {
         "Some spells require concentration to maintain an ongoing effect, and you can't concentrate on two spells at once",
         "To keep concentration, roll a Constitution save if you take damage. The DC is 10 or half the damage, whichever is higher",
         "The effects of different spells add together while the durations of those spells overlap",
-        "Some spells can be cast as a ritual. Doins so takes 10 minutes longer but doesn't expend a spell slot.",
-        "If you're wearing armor, you need to be proficient in that armor in order to cast spells",
+        "Some spells can be cast as a ritual. Doing so takes 10 minutes longer but doesn't expend a spell slot.",
+        "If you're wearing armour, you need to be proficient in that armour in order to cast spells",
 
         "A creature with darkvision can't discern color in darkness, only monochromatic shades",
         "A creature with blindsight can perceive its surroundings without sight, kinda like Daredevil",
 
         "A party travelling at a normal pace goes 300 feet in a minute, 3 miles in an hour, and 24 miles in a day",
-        "A party traveling at a fast pace goes 400 feet in a minute, 4 miles in an hour, and 30 miles in a day",
+        "A party travelling at a fast pace goes 400 feet in a minute, 4 miles in an hour, and 30 miles in a day",
         "A party travelling at a fast pace will suffer a -5 penalty to passive Perception scores",
         "A party travelling at a slow pace goes 200 feet in a minute, 2 miles in an hour, and 18 miles in a day",
         "A party travelling at a slow pace can use Stealth as they move",
@@ -142,11 +142,11 @@ const player_tips = {
         "While you are heavily encumbered, you have disadvantage on all rolls that use Strength, Dexterity, or Constitution",
 
         "A target with half cover has a +2 bonus to AC and Dexterity saving throws",
-        "A target with three-quaters cover has a +5 bonus to AC and Dexterity saving throws",
+        "A target with three-quarters cover has a +5 bonus to AC and Dexterity saving throws",
         "A target with total cover can't be targeted directly by an attack or a spell, though area of effect spells are fair game",
 
         "When you reduce a creature to 0 hit points with a melee attack, you can decide to knock it out instead of killing it",
-        "When damage reduces you to 0 hit points, you die if the extra damage equals or exeeds your hit point maximum",
+        "When damage reduces you to 0 hit points, you die if the extra damage equals or exceeds your hit point maximum",
         "At 0 hit points, you start making death saving throws, which have no bonuses you can add",
         "You can stabalize a dying creature with a successful DC 10 Medicine check",
         "If your stable, but not healed, you regain 1 hit point after 1d4 hours",
